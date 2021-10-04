@@ -1,13 +1,11 @@
-import './App.css';
-import Routes from './routes';
+import "./App.css";
+import Routes from "./routes/index.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       <Routes/>
-      </header>
-    </div>
+    <>
+      <Routes />
+    </>
   );
 }
 

@@ -1,21 +1,23 @@
 import Header from "../../components/Header";
 import HorizontalCard from "../../components/HorizontalCard";
-import { Quantity } from "../../components/QuantityInput";
 import { products } from "../../services/ballsList";
 import { addBallThunk } from "../../store/modules/Cart/thunk";
+import { BsFillPlusSquareFill } from "react-icons/bs";
 
-export default function Home () {
+export default function Home() {
+  return (
+    <div>
+      <Header></Header>
 
-    return (
-        <div>
-            <Header>
-
-            </Header>
-
-            <div>
-
-            {products.map(item=> <HorizontalCard objectProduct={item} Quantity={Quantity} functionButton={addBallThunk} />)}
-            </div>
-        </div>
-    )
+      <div>
+        {products.map((item) => (
+          <HorizontalCard key={item.id}
+            objectProduct={item}
+            functionButton={addBallThunk}
+            icon={BsFillPlusSquareFill}
+          />
+        ))}
+      </div>
+    </div>
+  );
 }

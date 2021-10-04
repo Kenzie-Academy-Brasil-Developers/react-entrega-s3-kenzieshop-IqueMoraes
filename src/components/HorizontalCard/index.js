@@ -1,21 +1,26 @@
-import { divProduct } from "./style";
+import { ImgBox, ProductBoxStyle } from "./style";
 
 export default function HorizontalCard({
   objectProduct,
-  Quantity,
   functionButton,
+  icon: Icon,
+
 }) {
+
+
+
   return (
-    <divProduct key={objectProduct.id}>
+    <ProductBoxStyle >
+      <ImgBox> 
       <img src={objectProduct.image} alt={objectProduct.name} />
+      </ImgBox>
       <h3>{objectProduct.name}</h3>
       <div>
-        <h4>R$ {objectProduct.price}</h4>
+        <h4>R${objectProduct.price}</h4>
         <div>
-          {Quantity}
-          {functionButton}
+          <button onClick={() => functionButton(objectProduct)} >{<Icon/>} </button>
         </div>
       </div>
-    </divProduct>
+    </ProductBoxStyle>
   );
 }
