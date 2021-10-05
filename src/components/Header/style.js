@@ -6,7 +6,7 @@ export const HeaderBox = styled.header`
   justify-content: space-between;
   height: 100px;
   background-color: #c2d5d5;
-  background: linear-gradient(90deg, rgba(194,213,213,1) 22%, rgba(4,13,11,1) 100%);
+  background: linear-gradient(90deg, rgb(71 129 129) 22%, rgba(4,13,11,1) 100%);
 
   > div {
     display: flex;
@@ -30,10 +30,10 @@ export const Ulist = styled.ul`
     margin-right: 2rem;
     > a {
       text-decoration: none;
-      color: #2defd4;
+      color: #ffffff;
     }
     > a::visited {
-      color: #2defd4;
+      color: #ffffff;
     }
     > a::hover{
         font-weight: bold;

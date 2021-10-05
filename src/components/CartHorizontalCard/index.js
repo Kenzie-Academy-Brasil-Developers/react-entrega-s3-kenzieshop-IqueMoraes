@@ -1,7 +1,7 @@
 import { ImgBox, ProductBoxStyle, ValueAndButtonsBox } from "./style";
-import { addBallThunk } from "../../store/modules/Cart/thunk";
+import { subBallThunk } from "../../store/modules/Cart/thunk";
 
-export default function HorizontalCard({
+export default function CartHorizontalCard({
   objectProduct,
   icon: Icon,
 
@@ -20,8 +20,8 @@ export default function HorizontalCard({
       </div>
       <ValueAndButtonsBox>
         <h4>R${objectProduct.price}</h4>
+          <button onClick={() => subBallThunk(objectProduct)} >{<Icon size={25}/>} </button>
         
-          <button onClick={() => addBallThunk(objectProduct)} >{<Icon size={30} />} </button>
       </ValueAndButtonsBox>
     </ProductBoxStyle>
   );
