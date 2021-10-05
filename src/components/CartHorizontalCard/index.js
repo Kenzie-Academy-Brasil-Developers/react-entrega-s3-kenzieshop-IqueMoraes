@@ -1,11 +1,15 @@
 import { ImgBox, ProductBoxStyle, ValueAndButtonsBox } from "./style";
 import { subBallThunk } from "../../store/modules/Cart/thunk";
+import { Dispatch } from "react";
+import { useDispatch } from "react-redux";
 
 export default function CartHorizontalCard({
   objectProduct,
   icon: Icon,
 
 }) {
+
+  const dispatch = useDispatch();
 
 
 
@@ -20,7 +24,7 @@ export default function CartHorizontalCard({
       </div>
       <ValueAndButtonsBox>
         <h4>R${objectProduct.price}</h4>
-          <button onClick={() => subBallThunk(objectProduct)} >{<Icon size={25}/>} </button>
+          <button onClick={() => dispatch(subBallThunk(objectProduct))} >{<Icon size={25}/>} </button>
         
       </ValueAndButtonsBox>
     </ProductBoxStyle>
