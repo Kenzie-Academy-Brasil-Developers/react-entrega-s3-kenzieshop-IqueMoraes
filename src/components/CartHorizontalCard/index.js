@@ -1,6 +1,5 @@
 import { ImgBox, ProductBoxStyle, ValueAndButtonsBox } from "./style";
 import { subBallThunk } from "../../store/modules/Cart/thunk";
-import { Dispatch } from "react";
 import { useDispatch } from "react-redux";
 
 export default function CartHorizontalCard({
